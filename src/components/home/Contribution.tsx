@@ -1,8 +1,8 @@
 import Image from "next/image"
+import Link from "next/link";
 
 import contributionShape_1 from "@/assets/img/images/contribution_shape01.png";
 import contributionShape_2 from "@/assets/img/images/contribution_shape02.png";
-import Link from "next/link";
 
 const Contribution = () => {
    return (

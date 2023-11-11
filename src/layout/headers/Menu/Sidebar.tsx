@@ -16,7 +16,7 @@ const Sidebar = ({ isActive, setIsActive }: any) => {
                         <Link href="/"><Image src={logo_1} alt="Logo" /></Link>
                     </div>
                     <div className="menu-outer">
-                        <MobileMenu />
+                        <MobileMenu setIsActive={setIsActive} />
                     </div>
                     <div className="social-links">
                         <ul className="clearfix list-wrap">

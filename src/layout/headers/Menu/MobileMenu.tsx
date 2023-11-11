@@ -5,7 +5,7 @@ import React, { useState } from "react";
 // internal
 import menu_data from "../../../data/MenuData";
 
-const MobileMenus = () => {
+const MobileMenus = ({ setIsActive }: any) => {
     const [navTitle, setNavTitle] = useState("");
     const currentRoute = usePathname();
 
@@ -15,6 +15,10 @@ const MobileMenus = () => {
 
     const isSubMenuItemActive = (subMenuLink: any) => {
         return currentRoute === subMenuLink;
+    };
+
+    const closeSidebar = () => {
+        setIsActive(false);
     };
 
 
@@ -33,20 +37,20 @@ const MobileMenus = () => {
                 <React.Fragment key={i}>
                     {menu.has_dropdown && (
                         <li className="menu-item-has-children">
-                            <Link href={menu.link}
+                            <Link href={menu.link} onClick={closeSidebar}
                                 className={` ${(isMenuItemActive(menu.link) || (menu.sub_menus && menu.sub_menus.some((sub_m) => sub_m.link && isSubMenuItemActive(sub_m.link)))) ? "active" : ""}`}>
                                 {menu.title}
-                                <div
-                                    className={`dropdown-btn ${navTitle === menu.title ? "open" : ""}`}
-                                    onClick={() => openMobileMenu(menu.title)} >
-                                    <i className={`${navTitle === menu.title ? "fas fa-angle-up" : "fas fa-angle-down"}`}></i>
-                                </div>
                             </Link>
+                            <div
+                                className={`dropdown-btn ${navTitle === menu.title ? "open" : ""}`}
+                                onClick={() => openMobileMenu(menu.title)} >
+                                <i className={`${navTitle === menu.title ? "fas fa-angle-up" : "fas fa-angle-down"}`}></i>
+                            </div>
                             {menu.sub_menus && menu.sub_menus.length > 0 && (
                                 <ul className="sub-menu" style={{ display: navTitle === menu.title ? "block" : "none" }}>
                                     {menu.sub_menus.map((sub, index) => (
                                         <li key={index}>
-                                            <Link href={sub.link}
+                                            <Link href={sub.link} onClick={closeSidebar}
                                                 className={sub.link && isSubMenuItemActive(sub.link) ? "active" : ""}>
                                                 {sub.title}
                                             </Link>
@@ -58,7 +62,7 @@ const MobileMenus = () => {
                     )}
                     {!menu.has_dropdown && (
                         <li className="menu-item-has-children">
-                            <Link href={menu.link} className={`${currentRoute === menu.link ? "active" : ""}`}>
+                            <Link onClick={closeSidebar} href={menu.link} className={`${currentRoute === menu.link ? "active" : ""}`}>
                                 {menu.title}
                             </Link>
                         </li>

@@ -23,6 +23,7 @@ const BlogComment = () => {
                         <p>The platform itself was incredibly user-friendly, making it easy for me to participate in the ICO. The intuitive interface guided me through the token purchase process seamlessly.</p>
                      </div>
                   </div>
+                  
                   <ul className="children list-wrap">
                      <li>
                         <div className="comments-box">

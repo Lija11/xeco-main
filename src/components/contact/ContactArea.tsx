@@ -56,6 +56,7 @@ const ContactArea = () => {
                   ))}
                </div>
             </div>
+            
             <div className="contact-form-wrap">
                <div className="row g-0">
                   <div className="col-57 order-0 order-lg-2">

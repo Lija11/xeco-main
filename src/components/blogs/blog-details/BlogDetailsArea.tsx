@@ -60,6 +60,7 @@ const BlogDetailsArea = ({ single_blog }: any) => {
                               <li><i className="far fa-eye"></i>{single_blog?.views ? single_blog.views : "1,752Viewers"}</li>
                            </ul>
                         </div>
+
                         <h2 className="title">{single_blog?.title ? single_blog.title : title_1}</h2>
                         {desc_1}
                         {desc_2}
@@ -69,6 +70,7 @@ const BlogDetailsArea = ({ single_blog }: any) => {
                            <p>{desc_5}</p>
                            <cite>- Chris Prouty</cite>
                         </blockquote>
+
                         <div className="blog-details-inner-img">
                            <div className="row">
                               <div className="col-md-6">
@@ -79,9 +81,11 @@ const BlogDetailsArea = ({ single_blog }: any) => {
                               </div>
                            </div>
                         </div>
+
                         <p>{desc_6}</p>
                         <p>{desc_7}</p>
                         <p>{desc_8}</p>
+
                         <div className="blog-details-bottom">
                            <div className="row align-items-center">
                               <div className="col-md-7">
@@ -106,6 +110,7 @@ const BlogDetailsArea = ({ single_blog }: any) => {
                         </div>
                      </div>
                   </div>
+                  
                   <div className="blog-avatar-wrap mb-65">
                      <div className="blog-avatar-img">
                         <Link href="#"><Image src={blogAvatar_2} alt="img" /></Link>

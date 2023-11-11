@@ -53,6 +53,7 @@ const BlogArea = () => {
                            </div>
                         </div>
                      ))}
+
                      {currentItems.filter(item => item.post === "standard").map((item) => (
                         <div key={item.id} className="blog-standard-post">
                            <div className="blog-standard-thumb">
@@ -76,6 +77,7 @@ const BlogArea = () => {
                         </div>
                      ))}
                   </div>
+                  
                   <nav className="pagination-wrap">
                      <ReactPaginate
                         breakLabel="..."

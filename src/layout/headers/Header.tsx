@@ -42,7 +42,6 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-
             </header>
             <Sidebar style={false} isActive={isActive} setIsActive={setIsActive} />
             <HeaderOffcanvas offCanvas={offCanvas} setOffCanvas={setOffCanvas} />

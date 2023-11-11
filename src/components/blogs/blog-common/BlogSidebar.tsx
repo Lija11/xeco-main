@@ -17,6 +17,7 @@ const BlogSidebar = () => {
                   </form>
                </div>
             </div>
+            
             <BlogCategory />
             <BlogRcPost />
             <div className="blog-widget">

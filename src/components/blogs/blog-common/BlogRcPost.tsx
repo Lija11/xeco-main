@@ -31,6 +31,7 @@ const rc_data: DataType[] = [
       title: "Building intelligent transportation systems",
    },
 ]
+
 const BlogRcPost = () => {
    return (
       <div className="blog-widget">

@@ -41,64 +41,64 @@ const roadmap_data: DataTyfe[] = [
    },
 ]
 
-const settings ={
+const settings = {
    dots: false,
-	infinite: true,
-	speed: 1000,
-    centerMode: true,
-    centerPadding: '260px',
-	autoplay: true,
-	arrows: false,
-	slidesToShow: 3,
-	slidesToScroll: 1,
-	responsive: [
-		{
-			breakpoint: 1400,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				infinite: true,
-                centerPadding: '100px',
-			}
-		},
-		{
-			breakpoint: 1200,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				infinite: true,
-                centerPadding: '40px',
-			}
-		},
-		{
-			breakpoint: 992,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 1,
-                enterPadding: '0',
-                centerMode: false,
-			}
-		},
-		{
-			breakpoint: 767,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 1,
-				enterPadding: '0',
-                centerMode: false,
-			}
-		},
-		{
-			breakpoint: 575,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-                enterPadding: '0',
-                centerMode: false,
-			}
-		},
-	]
+   infinite: true,
+   speed: 1000,
+   centerMode: true,
+   centerPadding: '260px',
+   autoplay: true,
+   arrows: false,
+   slidesToShow: 3,
+   slidesToScroll: 1,
+   responsive: [
+      {
+         breakpoint: 1400,
+         settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            centerPadding: '100px',
+         }
+      },
+      {
+         breakpoint: 1200,
+         settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            centerPadding: '40px',
+         }
+      },
+      {
+         breakpoint: 992,
+         settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            enterPadding: '0',
+            centerMode: false,
+         }
+      },
+      {
+         breakpoint: 767,
+         settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            enterPadding: '0',
+            centerMode: false,
+         }
+      },
+      {
+         breakpoint: 575,
+         settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            enterPadding: '0',
+            centerMode: false,
+         }
+      },
+   ]
 }
 
 const RoadMapArea = () => {
