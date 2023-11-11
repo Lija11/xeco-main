@@ -2994,3 +2994,25 @@ p.form_error {
     text-align: left;
     margin-top: 5px;
 }
+
+ /* error page */
+
+ .eg-error__area {
+    background-color: var(--tg-black);
+	padding: 290px 0 180px;
+}
+.eg-error__title {
+	font-size: 320px;
+	line-height: .8;
+	color: #ffffff;
+	margin: 0 0 40px;
+}
+.eg-error__content p {
+	font-size: 46px;
+	line-height: 1.18;
+	margin: 0 0 35px;
+	color: #ffffff;
+}
+.eg-error__content .eg-btn{
+	background: #222222;
+}
