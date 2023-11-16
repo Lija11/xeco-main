@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect } from "react";
-import { animationCreate } from "@/utils/utils";
 import ScrollToTop from "@/components/common/ScrollToTop";
 import { ToastContainer } from "react-toastify";
+import { animationCreate } from "@/utils/utils";
 
 if (typeof window !== "undefined") {
     require("bootstrap/dist/js/bootstrap");

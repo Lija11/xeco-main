@@ -3,7 +3,7 @@ import Link from "next/link.js";
 import { usePathname } from "next/navigation";
 import menu_data from "../../../data/MenuData";
 
-const NavMenu = ({ num = false }) => {
+const NavMenu = () => {
     const currentRoute = usePathname();
 
     const isMenuItemActive = (menuLink: string) => {
@@ -22,9 +22,6 @@ const NavMenu = ({ num = false }) => {
                 >
                     <Link href={menu.link}
                         className={`section-link ${(isMenuItemActive(menu.link) || (menu.sub_menus && menu.sub_menus.some((sub_m: any) => sub_m.link && isSubMenuItemActive(sub_m.link)))) ? "active" : ""}`}>
-                        {num && menu.id <= 9
-                            ? `0${menu.id}.`
-                            : num && `${menu.id}.`}
                         {menu.title}
                     </Link>
 
