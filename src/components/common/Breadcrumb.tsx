@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link";
 
 import breadcrumbShape_1 from "@/assets/img/images/breadcrumb_shape01.png";
 import breadcrumbShape_2 from "@/assets/img/images/breadcrumb_shape02.png";
@@ -13,7 +14,7 @@ const Breadcrumb = ({ title }: any) => {
                      <h2 className="title">{title}</h2>
                      <nav aria-label="breadcrumb">
                         <ol className="breadcrumb">
-                           <li className="breadcrumb-item"><a href="index.html">Home</a></li>
+                           <li className="breadcrumb-item"><Link href="/">Home</Link></li>
                            <li className="breadcrumb-item active" aria-current="page">{title}</li>
                         </ol>
                      </nav>

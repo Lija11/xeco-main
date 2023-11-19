@@ -8,6 +8,8 @@ import { useState } from "react"
 
 const BlogArea = () => {
 
+   const [currentPage, setCurrentPage] = useState(1);
+
    const blogs = blog_data;
 
    const itemsPerPage = 4;
@@ -15,10 +17,33 @@ const BlogArea = () => {
    const endOffset = itemOffset + itemsPerPage;
    const currentItems = blogs.slice(itemOffset, endOffset);
    const pageCount = Math.ceil(blogs.length / itemsPerPage);
+
    // click to request another page.
-   const handlePageClick = (event: any) => {
-      const newOffset = (event.selected * itemsPerPage) % blogs.length;
+   const handlePageClick = (pageNumber: number) => {
+      if (pageNumber < 1 || pageNumber > totalPages) {
+         return; // Avoid going to negative pages or beyond the total number of pages
+      }
+
+      const newOffset = (pageNumber - 1) * itemsPerPage; // Calculate the new offset
       setItemOffset(newOffset);
+      setCurrentPage(pageNumber); // Update the currentPage state
+   };
+
+   // Calculate total number of pages
+   const totalPages = Math.ceil(blogs.length / itemsPerPage);
+
+   // Generate an array of page numbers
+   const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
+
+   // Render pagination links
+   const renderPaginationLinks = () => {
+      return pageNumbers.map((pageNumber) => (
+         <li key={pageNumber} className={pageNumber === currentPage ? 'active' : ''}>
+            <a style={{ cursor: "pointer" }} onClick={() => handlePageClick(pageNumber)}>
+               {pageNumber}
+            </a>
+         </li>
+      ));
    };
 
    return (
@@ -77,17 +102,26 @@ const BlogArea = () => {
                         </div>
                      ))}
                   </div>
-                  
+
                   <nav className="pagination-wrap">
-                     <ReactPaginate
-                        breakLabel="..."
-                        nextLabel={<i className="fas fa-arrow-left"></i>}
-                        onPageChange={handlePageClick}
-                        pageRangeDisplayed={8}
-                        pageCount={pageCount}
-                        previousLabel={<i className="fas fa-arrow-right"></i>}
-                        renderOnZeroPageCount={null}
-                     />
+                     <ul className="list-wrap">
+                        <li>
+                           <a
+                              onClick={() => handlePageClick(currentPage - 1)}
+                              style={{ cursor: 'pointer' }}
+                              className={currentPage === 1 ? 'disabled' : ''}><i className="fas fa-arrow-left"></i>
+                           </a>
+                        </li>
+                        {renderPaginationLinks()}
+                        <li>
+                           <a
+                              onClick={() => handlePageClick(currentPage + 1)}
+                              style={{ cursor: 'pointer' }}
+                              className={currentPage === totalPages ? 'disabled' : ''}
+                           ><i className="fas fa-arrow-right"></i>
+                           </a>
+                        </li>
+                     </ul>
                   </nav>
                </div>
                <BlogSidebar />
