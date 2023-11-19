@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import login_option_1 from "@/assets/img/icons/google.svg";
 import login_option_2 from "@/assets/img/icons/facebook.svg";
-import login_option_3 from "@/assets/img/icons/apple.svg";
 import RegisterForm from "@/components/forms/RegisterForm";
 import LoginForm from "@/components/forms/LoginForm";
 
