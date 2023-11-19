@@ -3016,3 +3016,209 @@ p.form_error {
 .eg-error__content .eg-btn{
 	background: #222222;
 }
+
+/*----------------------------------------*/
+/* Login css
+/*----------------------------------------*/
+.eg-login__wrapper {
+	box-shadow: 0px 30px 70px rgba(1, 15, 28, 0.1);
+	padding: 50px 60px 70px;
+    background: var(--tg-secondary-color);
+    border-radius: 15px;
+ }
+ .eg-login__title {
+	font-weight: 500;
+	font-size: 30px;
+	margin-bottom: 4px;
+ }
+ .eg-login__top p a {
+	display: inline-block;
+	position: relative;
+	color: var(--tg-primary-color);
+ }
+ .eg-login__option-item {
+	margin-bottom: 10px;
+ }
+ .eg-login__option-item a {
+	display: inline-block;
+	width: 98px;
+	height: 56px;
+	line-height: 54px;
+	text-align: center;
+	border: 1px solid rgba(43,44,56,.86);
+	font-size: 16px;
+	width: 100%;
+	border-radius: 10px;
+	color: var(--tg-body-font-color);
+ }
+ .eg-login__bottom .btn{
+	text-align: center;
+	display: inline-block;
+ }
+ .eg-login__bottom .btn:hover{
+	background: var(--tg-primary-color);
+ }
+ .eg-login__option-item a img {
+	margin-right: 7px;
+	-webkit-transform: translateY(-2px);
+	-moz-transform: translateY(-2px);
+	-ms-transform: translateY(-2px);
+	-o-transform: translateY(-2px);
+	transform: translateY(-2px);
+ }
+ .eg-login__option-item a:hover {
+	color: var(--tg-primary-color);
+	border-color: var(--tg-primary-color);
+ }
+ .eg-login__mail {
+	position: relative;
+	z-index: 1;
+ }
+ .eg-login__mail::after {
+	position: absolute;
+	content: "";
+	left: 0;
+	right: 0;
+	bottom: 12px;
+	width: 100%;
+	height: 1px;
+	background-color: rgba(43,44,56,.86);
+	-webkit-transition: all 0.3s 0s ease-out;
+	-moz-transition: all 0.3s 0s ease-out;
+	-ms-transition: all 0.3s 0s ease-out;
+	-o-transition: all 0.3s 0s ease-out;
+	transition: all 0.3s 0s ease-out;
+	z-index: -1;
+ }
+ .eg-login__mail p {
+	font-size: 15px;
+	color: var(--tg-body-font-color);
+	margin-bottom: 0;
+	padding: 0 20px;
+	position: relative;
+	display: inline-block;
+	background-color: var(--tg-secondary-color);
+ }
+ .eg-login__input-wrapper {
+	margin-bottom: 14px;
+ }
+ .eg-login__input-box:not(:last-child) {
+	margin-bottom: 34px;
+ }
+ .eg-password-show {
+	position: relative;
+ }
+ .eg-login__input input {
+	width: 100%;
+    border: none;
+	font-size: 15px;
+	font-weight: 400;
+	display: block;
+	padding: 14px 20px;
+	color: var(--tg-white);
+	border-radius: 5px;
+	height: 60px;
+	transition: .3s linear;
+    background: hsla(0,0%,100%,.07);
+ }
+ .eg-login__input input:focus{
+	border-color: var(--tg-primary-color);
+ }
+ .eg-login__input input#eg_password {
+	padding-right: 60px;
+ }
+ .eg-login__input label {
+	margin-bottom: 10px;
+ }
+ .eg-login__input-eye {
+	position: absolute;
+	right: 26px;
+	top: 50%;
+	transform: translateY(-50%);
+ }
+ .eg-login__input-eye span {
+	-webkit-transition: all 0.3s 0s ease-out;
+	-moz-transition: all 0.3s 0s ease-out;
+	-ms-transition: all 0.3s 0s ease-out;
+	-o-transition: all 0.3s 0s ease-out;
+	transition: all 0.3s 0s ease-out;
+ }
+ .eg-login__input-eye:hover {
+	cursor: pointer;
+ }
+ .eg-login__input-eye span svg{
+    /* fill: var(--tg-white); */
+ }
+ .eg-login__option p {
+	text-align: center;
+	margin: 10px 0 0;
+ }
+ .eg-login__option p a {
+	display: inline-block;
+	color: var(--tg-primary-color);
+ }
+ .eg-login__remeber input {
+	display: none;
+ }
+ .eg-login__remeber input:checked ~ label::after {
+	background-color: var(--tg-primary-color);
+	border-color: var(--tg-primary-color);
+ }
+ .eg-login__remeber input:checked ~ label::before {
+	visibility: visible;
+	opacity: 1;
+ }
+ .eg-login__remeber label {
+	font-size: 15px;
+	color: var(--tg-body-font-color);
+	position: relative;
+	padding-left: 26px;
+	z-index: 1;
+ }
+ .eg-login__remeber label::after {
+	position: absolute;
+	content: "";
+	top: 4px;
+	left: 0;
+	width: 18px;
+	height: 18px;
+	line-height: 16px;
+	text-align: center;
+	border: 1px solid #C3C7C9;
+	z-index: -1;
+	-webkit-transition: all 0.3s 0s ease-out;
+	-moz-transition: all 0.3s 0s ease-out;
+	-ms-transition: all 0.3s 0s ease-out;
+	-o-transition: all 0.3s 0s ease-out;
+	transition: all 0.3s 0s ease-out;
+ }
+ .eg-login__remeber label::before {
+	position: absolute;
+	content: url("/assets/img/icons/check.svg");
+	top: 4px;
+	left: 0;
+	width: 18px;
+	height: 18px;
+	line-height: 16px;
+	text-align: center;
+	visibility: hidden;
+	opacity: 0;
+	color: #ffffff;
+	-webkit-transition: all 0.3s 0s ease-out;
+	-moz-transition: all 0.3s 0s ease-out;
+	-ms-transition: all 0.3s 0s ease-out;
+	-o-transition: all 0.3s 0s ease-out;
+	transition: all 0.3s 0s ease-out;
+ }
+ .eg-login__remeber label a:hover {
+	color: var(--tg-primary-color);
+ }
+ .eg-login__remeber label:hover {
+	cursor: pointer;
+ }
+ .eg-login__forgot a {
+	font-weight: 400;
+	font-size: 15px;
+	color: var(--tg-primary-color);
+	display: inline-block;
+ }

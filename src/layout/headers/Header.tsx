@@ -31,7 +31,7 @@ const Header = () => {
                                         </div>
                                         <div className="header-action">
                                             <ul className="list-wrap">
-                                                <li className="header-login"><Link href="#">Login<i className="fas fa-user"></i></Link></li>
+                                                <li className="header-login"><Link href="/login">Login<i className="fas fa-user"></i></Link></li>
                                                 <li className="offcanvas-menu"><a onClick={() => setOffCanvas(true)} style={{ cursor: "pointer" }} className="menu-tigger"><i className="fas fa-bars"></i></a></li>
                                             </ul>
                                         </div>

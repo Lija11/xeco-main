@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import BlogComment from "../blog-common/BlogComment";
 import BlogForm from "@/components/forms/BlogForm";
+import BlogSidebar from "../blog-common/BlogSidebar";
 
 import blogThumb_1 from "@/assets/img/blog/blog_details.jpg";
 import blogThumb_2 from "@/assets/img/blog/blog_details02.jpg";
@@ -123,6 +124,7 @@ const BlogDetailsArea = ({ single_blog }: any) => {
                   <BlogComment />
                   <BlogForm />
                </div>
+               <BlogSidebar/>
             </div>
          </div>
       </section>

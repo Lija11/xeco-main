@@ -698,7 +698,9 @@
 .contact-form {
     padding: 50px 30px;
 }
-
+.eg-login__wrapper {
+  padding: 50px 30px 60px;
+}
 
 }
 
